@@ -28,3 +28,22 @@
 #define FSFont(x) [UIFont systemFontOfSize:x]
 #define FSCellColor [UIColor colorWithRed:116 green:129 blue:139] //通用的视图背景色
 #endif
+
+
+
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+
+static BOOL OSVersionIsAtLeastiOS7() {
+    return (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1);
+}

@@ -7,14 +7,34 @@
 //
 
 #import "MGAppDelegate.h"
+#import "MMDrawerController.h"
+#import "FSConfig.h"
 
 @implementation MGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIViewController * leftDrawer = [[UIViewController alloc] init];
+    leftDrawer.view.backgroundColor = [UIColor blackColor];
+    UIViewController * center = [[UIViewController alloc] init];
+    center.view.backgroundColor = [UIColor yellowColor];
+    UIViewController * rightDrawer = [[UIViewController alloc] init];
+    rightDrawer.view.backgroundColor = [UIColor greenColor];
+    
+    MMDrawerController * drawerController = [[MMDrawerController alloc]
+                                             initWithCenterViewController:center
+                                             leftDrawerViewController:leftDrawer
+                                             rightDrawerViewController:nil];
+    [drawerController setMaximumLeftDrawerWidth:200];
+    [drawerController setMaximumLeftDrawerWidth:200];
+    
+    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window setRootViewController:drawerController];
+
     [self.window makeKeyAndVisible];
     return YES;
 }
