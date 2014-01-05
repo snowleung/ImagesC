@@ -7,7 +7,7 @@
 //
 
 #import "FSUserHelper.h"
-#import "UIDevice+IdentifierAddition.h"
+
 
 @implementation FSUserHelper
 static FSUserHelper *instance = nil;
@@ -23,7 +23,7 @@ static FSUserHelper *instance = nil;
 
 +(NSString *)getUserSessionID
 {
-    return [NSString stringWithFormat:@"iPhone%@",[[UIDevice currentDevice]uniqueDeviceIdentifier]];
+    return nil;
 }
 
 @end

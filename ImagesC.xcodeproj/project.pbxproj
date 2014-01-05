@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8013E0B51879569F00F6A178 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8013E0B41879569F00F6A178 /* libz.1.2.5.dylib */; };
+		8013E0B7187956B600F6A178 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8013E0B6187956B600F6A178 /* CFNetwork.framework */; };
 		80B1216A187951C5003CC817 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B12169187951C5003CC817 /* Foundation.framework */; };
 		80B1216C187951C5003CC817 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B1216B187951C5003CC817 /* CoreGraphics.framework */; };
 		80B1216E187951C5003CC817 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B1216D187951C5003CC817 /* UIKit.framework */; };
@@ -19,42 +21,39 @@
 		80B12185187951C5003CC817 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B1216D187951C5003CC817 /* UIKit.framework */; };
 		80B1218D187951C5003CC817 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80B1218B187951C5003CC817 /* InfoPlist.strings */; };
 		80B1218F187951C5003CC817 /* ImagesCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B1218E187951C5003CC817 /* ImagesCTests.m */; };
-		80B121D9187952CF003CC817 /* FSUserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B1219D187952CF003CC817 /* FSUserHelper.m */; };
-		80B121DA187952CF003CC817 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121A0187952CF003CC817 /* NSObject+SBJson.m */; };
-		80B121DB187952CF003CC817 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121A3187952CF003CC817 /* SBJsonParser.m */; };
-		80B121DC187952CF003CC817 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121A5187952CF003CC817 /* SBJsonStreamParser.m */; };
-		80B121DD187952CF003CC817 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121A7187952CF003CC817 /* SBJsonStreamParserAccumulator.m */; };
-		80B121DE187952CF003CC817 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121A9187952CF003CC817 /* SBJsonStreamParserAdapter.m */; };
-		80B121DF187952CF003CC817 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121AB187952CF003CC817 /* SBJsonStreamParserState.m */; };
-		80B121E0187952CF003CC817 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121AD187952CF003CC817 /* SBJsonStreamWriter.m */; };
-		80B121E1187952CF003CC817 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121AF187952CF003CC817 /* SBJsonStreamWriterAccumulator.m */; };
-		80B121E2187952CF003CC817 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121B1187952CF003CC817 /* SBJsonStreamWriterState.m */; };
-		80B121E3187952CF003CC817 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121B3187952CF003CC817 /* SBJsonTokeniser.m */; };
-		80B121E4187952CF003CC817 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121B5187952CF003CC817 /* SBJsonUTF8Stream.m */; };
+		80B121D9187952CF003CC817 /* FSUserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B1219D187952CF003CC817 /* FSUserHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121DA187952CF003CC817 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121A0187952CF003CC817 /* NSObject+SBJson.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121DB187952CF003CC817 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121A3187952CF003CC817 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121DC187952CF003CC817 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121A5187952CF003CC817 /* SBJsonStreamParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121DD187952CF003CC817 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121A7187952CF003CC817 /* SBJsonStreamParserAccumulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121DE187952CF003CC817 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121A9187952CF003CC817 /* SBJsonStreamParserAdapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121DF187952CF003CC817 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121AB187952CF003CC817 /* SBJsonStreamParserState.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121E0187952CF003CC817 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121AD187952CF003CC817 /* SBJsonStreamWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121E1187952CF003CC817 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121AF187952CF003CC817 /* SBJsonStreamWriterAccumulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121E2187952CF003CC817 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121B1187952CF003CC817 /* SBJsonStreamWriterState.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121E3187952CF003CC817 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121B3187952CF003CC817 /* SBJsonTokeniser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121E4187952CF003CC817 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121B5187952CF003CC817 /* SBJsonUTF8Stream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		80B121E5187952CF003CC817 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121B7187952CF003CC817 /* SBJsonWriter.m */; };
-		80B121E6187952CF003CC817 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121BA187952CF003CC817 /* SDImageCache.m */; };
-		80B121E7187952CF003CC817 /* SDNetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121BD187952CF003CC817 /* SDNetworkActivityIndicator.m */; };
-		80B121E8187952CF003CC817 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121C0187952CF003CC817 /* SDWebImageDecoder.m */; };
-		80B121E9187952CF003CC817 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121C2187952CF003CC817 /* SDWebImageDownloader.m */; };
-		80B121EA187952CF003CC817 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121C5187952CF003CC817 /* SDWebImageManager.m */; };
-		80B121EB187952CF003CC817 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121C8187952CF003CC817 /* SDWebImagePrefetcher.m */; };
+		80B121E6187952CF003CC817 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121BA187952CF003CC817 /* SDImageCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121E7187952CF003CC817 /* SDNetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121BD187952CF003CC817 /* SDNetworkActivityIndicator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121E8187952CF003CC817 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121C0187952CF003CC817 /* SDWebImageDecoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121E9187952CF003CC817 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121C2187952CF003CC817 /* SDWebImageDownloader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121EA187952CF003CC817 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121C5187952CF003CC817 /* SDWebImageManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121EB187952CF003CC817 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121C8187952CF003CC817 /* SDWebImagePrefetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		80B121EC187952CF003CC817 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121CA187952CF003CC817 /* UIImageView+WebCache.m */; };
-		80B121ED187952CF003CC817 /* UIColor+TT.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121CD187952CF003CC817 /* UIColor+TT.m */; };
-		80B121EE187952CF003CC817 /* UILabel+TT.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121CF187952CF003CC817 /* UILabel+TT.m */; };
-		80B121EF187952CF003CC817 /* UIView+TT.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121D1187952CF003CC817 /* UIView+TT.m */; };
-		80B121F0187952CF003CC817 /* SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121D3187952CF003CC817 /* SystemInfo.m */; };
-		80B121F1187952CF003CC817 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121D6187952CF003CC817 /* NSString+MD5Addition.m */; };
-		80B121F2187952CF003CC817 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121D8187952CF003CC817 /* UIDevice+IdentifierAddition.m */; };
-		80B1220F187952DD003CC817 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121F6187952DD003CC817 /* ASIAuthenticationDialog.m */; };
-		80B12210187952DD003CC817 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121F9187952DD003CC817 /* ASIDataCompressor.m */; };
-		80B12211187952DD003CC817 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121FB187952DD003CC817 /* ASIDataDecompressor.m */; };
-		80B12212187952DD003CC817 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121FD187952DD003CC817 /* ASIDownloadCache.m */; };
-		80B12213187952DD003CC817 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121FF187952DD003CC817 /* ASIFormDataRequest.m */; };
-		80B12214187952DD003CC817 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B12201187952DD003CC817 /* ASIHTTPRequest.m */; };
-		80B12215187952DD003CC817 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B12205187952DD003CC817 /* ASIInputStream.m */; };
-		80B12216187952DD003CC817 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B12207187952DD003CC817 /* ASINetworkQueue.m */; };
-		80B12217187952DD003CC817 /* NetStatusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B1220B187952DD003CC817 /* NetStatusManager.m */; };
-		80B12218187952DD003CC817 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B1220E187952DD003CC817 /* Reachability.m */; };
+		80B121ED187952CF003CC817 /* UIColor+TT.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121CD187952CF003CC817 /* UIColor+TT.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121EE187952CF003CC817 /* UILabel+TT.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121CF187952CF003CC817 /* UILabel+TT.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B121EF187952CF003CC817 /* UIView+TT.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121D1187952CF003CC817 /* UIView+TT.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B1220F187952DD003CC817 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121F6187952DD003CC817 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B12210187952DD003CC817 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121F9187952DD003CC817 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B12211187952DD003CC817 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121FB187952DD003CC817 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B12212187952DD003CC817 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121FD187952DD003CC817 /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B12213187952DD003CC817 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B121FF187952DD003CC817 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B12214187952DD003CC817 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B12201187952DD003CC817 /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B12215187952DD003CC817 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B12205187952DD003CC817 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B12216187952DD003CC817 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B12207187952DD003CC817 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B12217187952DD003CC817 /* NetStatusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B1220B187952DD003CC817 /* NetStatusManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80B12218187952DD003CC817 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B1220E187952DD003CC817 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8013E0B41879569F00F6A178 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		8013E0B6187956B600F6A178 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		80B12166187951C5003CC817 /* ImagesC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagesC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B12169187951C5003CC817 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		80B1216B187951C5003CC817 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -138,12 +139,6 @@
 		80B121CF187952CF003CC817 /* UILabel+TT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TT.m"; sourceTree = "<group>"; };
 		80B121D0187952CF003CC817 /* UIView+TT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TT.h"; sourceTree = "<group>"; };
 		80B121D1187952CF003CC817 /* UIView+TT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TT.m"; sourceTree = "<group>"; };
-		80B121D2187952CF003CC817 /* SystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInfo.h; sourceTree = "<group>"; };
-		80B121D3187952CF003CC817 /* SystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemInfo.m; sourceTree = "<group>"; };
-		80B121D5187952CF003CC817 /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
-		80B121D6187952CF003CC817 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
-		80B121D7187952CF003CC817 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
-		80B121D8187952CF003CC817 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
 		80B121F5187952DD003CC817 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		80B121F6187952DD003CC817 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		80B121F7187952DD003CC817 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -175,6 +170,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8013E0B7187956B600F6A178 /* CFNetwork.framework in Frameworks */,
+				8013E0B51879569F00F6A178 /* libz.1.2.5.dylib in Frameworks */,
 				80B1216C187951C5003CC817 /* CoreGraphics.framework in Frameworks */,
 				80B1216E187951C5003CC817 /* UIKit.framework in Frameworks */,
 				80B1216A187951C5003CC817 /* Foundation.framework in Frameworks */,
@@ -218,6 +215,8 @@
 		80B12168187951C5003CC817 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8013E0B6187956B600F6A178 /* CFNetwork.framework */,
+				8013E0B41879569F00F6A178 /* libz.1.2.5.dylib */,
 				80B12169187951C5003CC817 /* Foundation.framework */,
 				80B1216B187951C5003CC817 /* CoreGraphics.framework */,
 				80B1216D187951C5003CC817 /* UIKit.framework */,
@@ -277,9 +276,6 @@
 				80B1219E187952CF003CC817 /* JSON */,
 				80B121B8187952CF003CC817 /* SDWebImage */,
 				80B121CB187952CF003CC817 /* ShorcutFunction */,
-				80B121D2187952CF003CC817 /* SystemInfo.h */,
-				80B121D3187952CF003CC817 /* SystemInfo.m */,
-				80B121D4187952CF003CC817 /* UDID */,
 			);
 			name = TIUtil;
 			path = ImagesC/TIUtil;
@@ -353,17 +349,6 @@
 				80B121D1187952CF003CC817 /* UIView+TT.m */,
 			);
 			path = ShorcutFunction;
-			sourceTree = "<group>";
-		};
-		80B121D4187952CF003CC817 /* UDID */ = {
-			isa = PBXGroup;
-			children = (
-				80B121D5187952CF003CC817 /* NSString+MD5Addition.h */,
-				80B121D6187952CF003CC817 /* NSString+MD5Addition.m */,
-				80B121D7187952CF003CC817 /* UIDevice+IdentifierAddition.h */,
-				80B121D8187952CF003CC817 /* UIDevice+IdentifierAddition.m */,
-			);
-			path = UDID;
 			sourceTree = "<group>";
 		};
 		80B121F3187952DD003CC817 /* TINetWork */ = {
@@ -536,20 +521,17 @@
 				80B121E6187952CF003CC817 /* SDImageCache.m in Sources */,
 				80B121DB187952CF003CC817 /* SBJsonParser.m in Sources */,
 				80B121DD187952CF003CC817 /* SBJsonStreamParserAccumulator.m in Sources */,
-				80B121F2187952CF003CC817 /* UIDevice+IdentifierAddition.m in Sources */,
 				80B121DF187952CF003CC817 /* SBJsonStreamParserState.m in Sources */,
 				80B121E1187952CF003CC817 /* SBJsonStreamWriterAccumulator.m in Sources */,
 				80B121EF187952CF003CC817 /* UIView+TT.m in Sources */,
 				80B12216187952DD003CC817 /* ASINetworkQueue.m in Sources */,
 				80B121E7187952CF003CC817 /* SDNetworkActivityIndicator.m in Sources */,
-				80B121F0187952CF003CC817 /* SystemInfo.m in Sources */,
 				80B121E2187952CF003CC817 /* SBJsonStreamWriterState.m in Sources */,
 				80B121EE187952CF003CC817 /* UILabel+TT.m in Sources */,
 				80B12212187952DD003CC817 /* ASIDownloadCache.m in Sources */,
 				80B121E9187952CF003CC817 /* SDWebImageDownloader.m in Sources */,
 				80B121EB187952CF003CC817 /* SDWebImagePrefetcher.m in Sources */,
 				80B121E4187952CF003CC817 /* SBJsonUTF8Stream.m in Sources */,
-				80B121F1187952CF003CC817 /* NSString+MD5Addition.m in Sources */,
 				80B12176187951C5003CC817 /* main.m in Sources */,
 				80B121EA187952CF003CC817 /* SDWebImageManager.m in Sources */,
 				80B1220F187952DD003CC817 /* ASIAuthenticationDialog.m in Sources */,
@@ -756,6 +738,7 @@
 				80B12194187951C5003CC817 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80B12195187951C5003CC817 /* Build configuration list for PBXNativeTarget "ImagesCTests" */ = {
 			isa = XCConfigurationList;
@@ -764,6 +747,7 @@
 				80B12197187951C5003CC817 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
