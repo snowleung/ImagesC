@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/isd/isd_qqmusicmac_rep/!svn/ver/3088/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest
+END
+ASIHTTPRequest.m
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIHTTPRequest.m
+END
+ASINetworkQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASINetworkQueue.h
+END
+ASICacheDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASICacheDelegate.h
+END
+ASIProgressDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIProgressDelegate.h
+END
+ASIAuthenticationDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIAuthenticationDialog.h
+END
+ASIDataDecompressor.h
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIDataDecompressor.h
+END
+ASIDownloadCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIDownloadCache.m
+END
+ASINetworkQueue.m
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASINetworkQueue.m
+END
+ASIAuthenticationDialog.m
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIAuthenticationDialog.m
+END
+ASIDataDecompressor.m
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/isd/isd_qqmusicmac_rep/!svn/ver/3088/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIDataDecompressor.m
+END
+ASIFormDataRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIFormDataRequest.h
+END
+ASIFormDataRequest.m
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIFormDataRequest.m
+END
+ASIInputStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIInputStream.h
+END
+ASIHTTPRequestConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIHTTPRequestConfig.h
+END
+ASIInputStream.m
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIInputStream.m
+END
+ASIHTTPRequestDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIHTTPRequestDelegate.h
+END
+ASIDataCompressor.h
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIDataCompressor.h
+END
+ASIHTTPRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIHTTPRequest.h
+END
+ASIDownloadCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/isd/isd_qqmusicmac_rep/!svn/ver/2162/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIDownloadCache.h
+END
+ASIDataCompressor.m
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/isd/isd_qqmusicmac_rep/!svn/ver/3088/QQMusicIPhone_proj/branches/QQMusicIPhone3.0With2.7Build06/Classes/ASIHttpRequest/ASIDataCompressor.m
+END
