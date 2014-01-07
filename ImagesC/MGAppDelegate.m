@@ -9,25 +9,24 @@
 #import "MGAppDelegate.h"
 #import "MMDrawerController.h"
 #import "FSConfig.h"
+#import "Menu.h"
 
 @implementation MGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UIViewController * leftDrawer = [[UIViewController alloc] init];
-    leftDrawer.view.backgroundColor = [UIColor blackColor];
+    Menu *menu = [[Menu alloc] initWithStyle:UITableViewStylePlain];
     UIViewController * center = [[UIViewController alloc] init];
     center.view.backgroundColor = [UIColor yellowColor];
-    UIViewController * rightDrawer = [[UIViewController alloc] init];
-    rightDrawer.view.backgroundColor = [UIColor greenColor];
     
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:menu];
+    UINavigationController *navi2 = [[UINavigationController alloc] initWithRootViewController:center];
     MMDrawerController * drawerController = [[MMDrawerController alloc]
-                                             initWithCenterViewController:center
-                                             leftDrawerViewController:leftDrawer
+                                             initWithCenterViewController:navi2
+                                             leftDrawerViewController:navi
                                              rightDrawerViewController:nil];
-    [drawerController setMaximumLeftDrawerWidth:200];
-    [drawerController setMaximumLeftDrawerWidth:200];
-    
+    [drawerController setMaximumLeftDrawerWidth:280];
+
     [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     
