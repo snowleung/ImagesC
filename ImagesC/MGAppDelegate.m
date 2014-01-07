@@ -9,14 +9,15 @@
 #import "MGAppDelegate.h"
 #import "MMDrawerController.h"
 #import "FSConfig.h"
-#import "Menu.h"
+#import "MGViewController.h"
+#import "MGIndexViewController.h"
 
 @implementation MGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    Menu *menu = [[Menu alloc] initWithStyle:UITableViewStylePlain];
-    UIViewController * center = [[UIViewController alloc] init];
+    MGViewController *menu = [[MGViewController alloc] init];
+    MGIndexViewController * center = [[MGIndexViewController alloc] init];
     center.view.backgroundColor = [UIColor yellowColor];
     
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:menu];

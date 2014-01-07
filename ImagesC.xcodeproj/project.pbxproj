@@ -68,6 +68,10 @@
 		8013E1651879670900F6A178 /* photo7t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8013E1541879670900F6A178 /* photo7t.jpg */; };
 		8013E1661879670900F6A178 /* photo8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8013E1551879670900F6A178 /* photo8.jpg */; };
 		8013E1671879670900F6A178 /* photo8t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8013E1561879670900F6A178 /* photo8t.jpg */; };
+		8013E17D187BDCAF00F6A178 /* MGIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8013E178187BDCAF00F6A178 /* MGIndexViewController.m */; };
+		8013E17E187BDCAF00F6A178 /* MGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8013E17A187BDCAF00F6A178 /* MGViewController.m */; };
+		8013E185187BDE3000F6A178 /* MGProtocolBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8013E184187BDE3000F6A178 /* MGProtocolBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8013E18A187BDF5B00F6A178 /* FSBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8013E188187BDF5B00F6A178 /* FSBaseManager.m */; };
 		80B1216A187951C5003CC817 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B12169187951C5003CC817 /* Foundation.framework */; };
 		80B1216C187951C5003CC817 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B1216B187951C5003CC817 /* CoreGraphics.framework */; };
 		80B1216E187951C5003CC817 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B1216D187951C5003CC817 /* UIKit.framework */; };
@@ -228,6 +232,17 @@
 		8013E1541879670900F6A178 /* photo7t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo7t.jpg; sourceTree = "<group>"; };
 		8013E1551879670900F6A178 /* photo8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo8.jpg; sourceTree = "<group>"; };
 		8013E1561879670900F6A178 /* photo8t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo8t.jpg; sourceTree = "<group>"; };
+		8013E177187BDCAF00F6A178 /* MGIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGIndexViewController.h; sourceTree = "<group>"; };
+		8013E178187BDCAF00F6A178 /* MGIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGIndexViewController.m; sourceTree = "<group>"; };
+		8013E179187BDCAF00F6A178 /* MGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGViewController.h; sourceTree = "<group>"; };
+		8013E17A187BDCAF00F6A178 /* MGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGViewController.m; sourceTree = "<group>"; };
+		8013E17F187BDD3500F6A178 /* MGBasic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGBasic.h; sourceTree = "<group>"; };
+		8013E180187BDD4D00F6A178 /* MGNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGNotification.h; sourceTree = "<group>"; };
+		8013E183187BDE3000F6A178 /* MGProtocolBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGProtocolBase.h; sourceTree = "<group>"; };
+		8013E184187BDE3000F6A178 /* MGProtocolBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGProtocolBase.m; sourceTree = "<group>"; };
+		8013E188187BDF5B00F6A178 /* FSBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaseManager.m; sourceTree = "<group>"; };
+		8013E189187BDF5B00F6A178 /* MGBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGBaseManager.h; sourceTree = "<group>"; };
+		8013E18B187BDFCC00F6A178 /* MGConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGConfig.h; sourceTree = "<group>"; };
 		80B12166187951C5003CC817 /* ImagesC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagesC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B12169187951C5003CC817 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		80B1216B187951C5003CC817 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -507,6 +522,43 @@
 			path = Photos;
 			sourceTree = "<group>";
 		};
+		8013E176187BDCAF00F6A178 /* MGViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8013E177187BDCAF00F6A178 /* MGIndexViewController.h */,
+				8013E178187BDCAF00F6A178 /* MGIndexViewController.m */,
+				8013E179187BDCAF00F6A178 /* MGViewController.h */,
+				8013E17A187BDCAF00F6A178 /* MGViewController.m */,
+			);
+			path = MGViewController;
+			sourceTree = "<group>";
+		};
+		8013E181187BDE3000F6A178 /* MGProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				8013E182187BDE3000F6A178 /* ProtocolBase */,
+			);
+			path = MGProtocol;
+			sourceTree = "<group>";
+		};
+		8013E182187BDE3000F6A178 /* ProtocolBase */ = {
+			isa = PBXGroup;
+			children = (
+				8013E183187BDE3000F6A178 /* MGProtocolBase.h */,
+				8013E184187BDE3000F6A178 /* MGProtocolBase.m */,
+			);
+			path = ProtocolBase;
+			sourceTree = "<group>";
+		};
+		8013E187187BDF5B00F6A178 /* MGDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				8013E188187BDF5B00F6A178 /* FSBaseManager.m */,
+				8013E189187BDF5B00F6A178 /* MGBaseManager.h */,
+			);
+			path = MGDataManager;
+			sourceTree = "<group>";
+		};
 		80B1215D187951C5003CC817 = {
 			isa = PBXGroup;
 			children = (
@@ -547,7 +599,13 @@
 		80B1216F187951C5003CC817 /* ImagesC */ = {
 			isa = PBXGroup;
 			children = (
+				8013E187187BDF5B00F6A178 /* MGDataManager */,
+				8013E176187BDCAF00F6A178 /* MGViewController */,
 				80B12178187951C5003CC817 /* MGAppDelegate.h */,
+				8013E181187BDE3000F6A178 /* MGProtocol */,
+				8013E180187BDD4D00F6A178 /* MGNotification.h */,
+				8013E18B187BDFCC00F6A178 /* MGConfig.h */,
+				8013E17F187BDD3500F6A178 /* MGBasic.h */,
 				80B12179187951C5003CC817 /* MGAppDelegate.m */,
 				80B1217B187951C5003CC817 /* Images.xcassets */,
 				80B12170187951C5003CC817 /* Supporting Files */,
@@ -819,6 +877,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8013E1171879657300F6A178 /* PSTGridLayoutItem.m in Sources */,
+				8013E17E187BDCAF00F6A178 /* MGViewController.m in Sources */,
 				8013E10F1879657300F6A178 /* PSTCollectionViewCell.m in Sources */,
 				80B12210187952DD003CC817 /* ASIDataCompressor.m in Sources */,
 				8013E0EA1879654B00F6A178 /* SDWebImagePrefetcher.m in Sources */,
@@ -830,6 +889,7 @@
 				8013E13A187965D000F6A178 /* MWCaptionView.m in Sources */,
 				80B121E5187952CF003CC817 /* SBJsonWriter.m in Sources */,
 				8013E10D1879657300F6A178 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
+				8013E18A187BDF5B00F6A178 /* FSBaseManager.m in Sources */,
 				80B121D9187952CF003CC817 /* FSUserHelper.m in Sources */,
 				80B12215187952DD003CC817 /* ASIInputStream.m in Sources */,
 				8013E0ED1879654B00F6A178 /* UIImage+MultiFormat.m in Sources */,
@@ -857,11 +917,13 @@
 				80B121ED187952CF003CC817 /* UIColor+TT.m in Sources */,
 				8013E0E61879654B00F6A178 /* SDWebImageDecoder.m in Sources */,
 				8013E0E91879654B00F6A178 /* SDWebImageManager.m in Sources */,
+				8013E185187BDE3000F6A178 /* MGProtocolBase.m in Sources */,
 				80B121DC187952CF003CC817 /* SBJsonStreamParser.m in Sources */,
 				8013E0C418795AF400F6A178 /* MMDrawerVisualState.m in Sources */,
 				8013E10E1879657300F6A178 /* PSTCollectionView.m in Sources */,
 				8013E1111879657300F6A178 /* PSTCollectionViewData.m in Sources */,
 				80B121DB187952CF003CC817 /* SBJsonParser.m in Sources */,
+				8013E17D187BDCAF00F6A178 /* MGIndexViewController.m in Sources */,
 				8013E1191879657300F6A178 /* PSTGridLayoutSection.m in Sources */,
 				80B121DD187952CF003CC817 /* SBJsonStreamParserAccumulator.m in Sources */,
 				8013E0E81879654B00F6A178 /* SDWebImageDownloaderOperation.m in Sources */,
