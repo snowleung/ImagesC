@@ -14,6 +14,7 @@
  通知的key
  *-------------------------------------------------------*/
 #define kKeyListCatalogsSucc @"kKeyListCatalogsSucc"
+#define kKeyListImagesSucc @"kKeyListImagesSucc"
 
 #define SEND_NOTIFICATION(NAME,OBJECT) NSNotification *notification =[NSNotification notificationWithName:NAME object:OBJECT]; [[NSNotificationCenter defaultCenter] postNotification:notification];
 

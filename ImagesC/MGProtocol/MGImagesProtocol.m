@@ -43,7 +43,7 @@
 
 -(NSString*)getUrl
 {
-    return [NSString stringWithFormat:@"http://catworld.sinaapp.com/list_catalogs?tag_id=1&pn=%d&rn=%d",startIndex,length];
+    return [NSString stringWithFormat:@"http://catworld.sinaapp.com/list_images?tag_id=1&pn=%d&rn=%d",startIndex,length];
 }
 
 -(void)onAddDataInRoot:(NSMutableString *)rootnode

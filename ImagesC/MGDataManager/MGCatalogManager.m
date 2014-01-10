@@ -14,8 +14,6 @@
 @synthesize c_id;
 @synthesize tag_id;
 @synthesize title;
-
-
 @end
 
 @implementation catalogsModel
