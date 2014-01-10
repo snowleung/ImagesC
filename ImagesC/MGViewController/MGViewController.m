@@ -9,6 +9,8 @@
 #import "MGViewController.h"
 #import "SDImageCache.h"
 #import "MMDrawerController.h"
+#import "MGCatalogManager.h"
+
 
 @interface MGViewController ()
 
@@ -33,15 +35,31 @@
 //        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
 //        
         self.view.backgroundColor = [UIColor blackColor];
-
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(catalogDataRecieve:) name:kKeyListCatalogsSucc object:nil];
     }
     return self;
 }
 
+#pragma mark - datarecive
 
-#pragma mark -
+-(void)catalogDataRecieve:(NSNotification *)notification
+{
+    if ([[notification name] isEqualToString:kKeyListCatalogsSucc] == YES)
+    {
+        catalogsModel * o = (catalogsModel *)notification.object;
+        self.catalogs =  o.catalogs;
+        [self.tableView reloadData];
+    }
+}
+
+
+
 #pragma mark View
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    [[MGCatalogManager shareCatalogManager]listCatalogs:0 rn:100];
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -76,7 +94,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSInteger rows = 1;
+    NSInteger rows = 0;
+    if (self.catalogs != nil) {
+        rows = self.catalogs.count;
+    }
     return rows;
 }
 
@@ -89,10 +110,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.backgroundColor = [UIColor blackColor];
     }
-    cell.textLabel.text = @"Photo selection grid";
+    catalogsObject *co = [self.catalogs objectAtIndex:indexPath.row];
+    cell.textLabel.text = co.title;
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.detailTextLabel.text = @"selection enabled, start at grid";
-    cell.detailTextLabel.textColor = [UIColor whiteColor];
+//    cell.detailTextLabel.text = @"selection enabled, start at grid";
+//    cell.detailTextLabel.textColor = [UIColor whiteColor];
     return cell;
 	
 }

@@ -16,6 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
     MGViewController *menu = [[MGViewController alloc] init];
     MGIndexViewController * center = [[MGIndexViewController alloc] init];
     center.view.backgroundColor = [UIColor yellowColor];

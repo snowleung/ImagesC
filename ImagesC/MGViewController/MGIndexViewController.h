@@ -14,6 +14,6 @@
 }
 @property (nonatomic, strong) NSMutableArray *photos;
 @property (nonatomic, strong) NSMutableArray *thumbs;
-
+-(void)imagesDataRecieve:(NSNotification *)notification;
 
 @end

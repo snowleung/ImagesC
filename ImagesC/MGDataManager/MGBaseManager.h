@@ -13,3 +13,15 @@
 
 -(void)cleanCache;
 @end
+
+@interface MGBaseModelObject : NSObject
+{
+    NSInteger rn;
+    NSInteger pn;
+    NSInteger total;
+}
+
+@property (nonatomic, assign) NSInteger rn;
+@property (nonatomic, assign) NSInteger pn;
+@property (nonatomic, assign) NSInteger total;
+@end

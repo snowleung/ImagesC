@@ -8,14 +8,26 @@
 
 #import "MGIndexViewController.h"
 
+
 @interface MGIndexViewController ()
 
 @end
 
 @implementation MGIndexViewController
 
+
+-(void)imagesDataRecieve:(NSNotification *)notification
+{
+    if ([[notification name] isEqualToString:kKeyListCatalogsSucc] == YES)
+    {
+
+    }
+}
+
+
 - (id)init{
     if (self = [super init]) {
+
         self.delegate = self;
         // Browser
         NSMutableArray *photos = [[NSMutableArray alloc] init];
@@ -70,6 +82,10 @@
 
     }
     return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
 }
 
 - (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
