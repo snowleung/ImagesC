@@ -19,9 +19,13 @@
     NSInteger rn;
     NSInteger pn;
     NSInteger total;
+    NSInteger tag_id;
+    NSInteger c_id;
 }
 
 @property (nonatomic, assign) NSInteger rn;
 @property (nonatomic, assign) NSInteger pn;
 @property (nonatomic, assign) NSInteger total;
+@property (nonatomic, assign) NSInteger tag_id;
+@property (nonatomic, assign) NSInteger c_id;
 @end

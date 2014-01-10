@@ -14,6 +14,14 @@
 }
 @property (nonatomic, strong) NSMutableArray *photos;
 @property (nonatomic, strong) NSMutableArray *thumbs;
+//query data params
+
+@property (nonatomic, assign) NSInteger tag_id;
+@property (nonatomic, assign) NSInteger c_id;
+@property (nonatomic, assign) NSInteger rn;
+@property (nonatomic, assign) NSInteger pn;
+
 -(void)imagesDataRecieve:(NSNotification *)notification;
+-(void)reloadSourceWithTag_id:(NSInteger)tag_id catalog_id:(NSInteger)c_id rn:(NSInteger)rn pn:(NSInteger)pn;
 
 @end

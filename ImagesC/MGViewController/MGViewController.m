@@ -10,7 +10,8 @@
 #import "SDImageCache.h"
 #import "MMDrawerController.h"
 #import "MGCatalogManager.h"
-
+#import "MGImagesManager.h"
+#import "MGIndexViewController.h"
 
 @interface MGViewController ()
 
@@ -51,8 +52,29 @@
         [self.tableView reloadData];
     }
 }
-
-
+//
+//-(void)imagesDataRecieve:(NSNotification *)notification
+//{
+//    if ([[notification name] isEqualToString:kKeyListImagesSucc] == YES)
+//    {
+//        MGImagesModel * o = (MGImagesModel *)notification.object;
+//        [self generatePhotos:o];
+//    }
+//}
+//
+//- (void)generatePhotos:(MGImagesModel *)m{
+//    
+//    NSMutableArray *photos = [[NSMutableArray alloc] init];
+//    NSMutableArray *thumbs = [[NSMutableArray alloc] init];
+//    
+//    for (MGImagesObject *iter in m.images) {
+//        [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:iter.origin_url]]];
+//        [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:iter.origin_url]]];
+//    }
+//    
+//    self.photos = photos;
+//    self.thumbs = thumbs;
+//}
 
 #pragma mark View
 
@@ -123,83 +145,36 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	// Browser
-	NSMutableArray *photos = [[NSMutableArray alloc] init];
-	NSMutableArray *thumbs = [[NSMutableArray alloc] init];
-    MWPhoto *photo;
-    BOOL displayActionButton = YES;
-    BOOL displaySelectionButtons = NO;
-    BOOL displayNavArrows = NO;
-    BOOL enableGrid = YES;
-    BOOL startOnGrid = NO;
-    // Photos
-    photo = [MWPhoto photoWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"photo5" ofType:@"jpg"]]];
-    photo.caption = @"White Tower";
-    [photos addObject:photo];
-    photo = [MWPhoto photoWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"photo2" ofType:@"jpg"]]];
-    photo.caption = @"The London Eye is a giant Ferris wheel situated on the banks of the River Thames, in London, England.";
-    [photos addObject:photo];
-    photo = [MWPhoto photoWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"photo3" ofType:@"jpg"]]];
-    photo.caption = @"York Floods";
-    [photos addObject:photo];
-    photo = [MWPhoto photoWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"photo4" ofType:@"jpg"]]];
-    photo.caption = @"Campervan";
-    [photos addObject:photo];
-    // Thumbs
-    photo = [MWPhoto photoWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"photo5t" ofType:@"jpg"]]];
-    [thumbs addObject:photo];
-    photo = [MWPhoto photoWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"photo2t" ofType:@"jpg"]]];
-    [thumbs addObject:photo];
-    photo = [MWPhoto photoWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"photo3t" ofType:@"jpg"]]];
-    [thumbs addObject:photo];
-    photo = [MWPhoto photoWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"photo4t" ofType:@"jpg"]]];
-    [thumbs addObject:photo];
-    // Options
-    startOnGrid = YES;
-    displayNavArrows = YES;
-    
-    self.photos = photos;
-    self.thumbs = thumbs;
-	
-	// Create browser
-	MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
-    browser.displayActionButton = displayActionButton;
-    browser.displayNavArrows = displayNavArrows;
-    browser.displaySelectionButtons = displaySelectionButtons;
-    browser.alwaysShowControls = displaySelectionButtons;
-    browser.wantsFullScreenLayout = NO;
-    browser.zoomPhotosToFill = YES;
-    browser.enableGrid = enableGrid;
-    browser.startOnGrid = startOnGrid;
-    [browser setCurrentPhotoIndex:0];
-    
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:browser];
+    catalogsObject *co = [self.catalogs objectAtIndex:indexPath.row];
+
+    MGIndexViewController * center = [[MGIndexViewController alloc] init];
+    [center reloadSourceWithTag_id:co.tag_id catalog_id:co.c_id rn:50 pn:0];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:center];
     MMDrawerController *d = [self mm_drawerController];
     [d setCenterViewController:nc withCloseAnimation:YES completion:nil];
 }
 
-#pragma mark - MWPhotoBrowserDelegate
-
-- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
-    return _photos.count;
-}
-
-- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
-    if (index < _photos.count)
-        return [_photos objectAtIndex:index];
-    return nil;
-}
-
-- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
-    if (index < _thumbs.count)
-        return [_thumbs objectAtIndex:index];
-    return nil;
-}
-
-- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index {
-    NSLog(@"Did start viewing photo at index %lu", (unsigned long)index);
-}
+//#pragma mark - MWPhotoBrowserDelegate
+//
+//- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+//    return _photos.count;
+//}
+//
+//- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+//    if (index < _photos.count)
+//        return [_photos objectAtIndex:index];
+//    return nil;
+//}
+//
+//- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
+//    if (index < _thumbs.count)
+//        return [_thumbs objectAtIndex:index];
+//    return nil;
+//}
+//
+//- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index {
+//    NSLog(@"Did start viewing photo at index %lu", (unsigned long)index);
+//}
 #pragma mark - mm
 
 -(MMDrawerController*)mm_drawerController{

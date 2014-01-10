@@ -72,6 +72,8 @@ static MGCatalogManager *instance = nil;
     cm.rn = [[data objectForKey:@"rn"] integerValue];
     cm.pn = [[data objectForKey:@"pn"] integerValue];
     cm.total = [[data objectForKey:@"total"] integerValue];
+    cm.c_id = [[data objectForKey:@"c_id"] integerValue];
+    cm.tag_id = [[data objectForKey:@"tag_id"] integerValue];
     
     NSArray *ar = [data objectForKey:@"catalogs"];
     for (id c in ar) {

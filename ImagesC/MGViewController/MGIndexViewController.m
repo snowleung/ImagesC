@@ -14,7 +14,7 @@
 @end
 
 @implementation MGIndexViewController
-
+@synthesize tag_id,c_id,rn,pn,photos,thumbs;
 
 -(void)imagesDataRecieve:(NSNotification *)notification
 {
@@ -23,6 +23,13 @@
         MGImagesModel * o = (MGImagesModel *)notification.object;
         [self generatePhotos:o];
     }
+}
+
+- (void)reloadSourceWithTag_id:(NSInteger)tag_id catalog_id:(NSInteger)c_id rn:(NSInteger)rn pn:(NSInteger)pn{
+    self.tag_id = tag_id;
+    self.c_id = c_id;
+    self.rn = rn;
+    self.pn = pn;
 }
 
 - (void)generatePhotos:(MGImagesModel *)m{
@@ -75,22 +82,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(imagesDataRecieve:) name:kKeyListImagesSucc object:nil];
-    [[MGImagesManager shareImagesManager] listImages:1 catalog_id:1 start_index:1 rn:30];
+    [[MGImagesManager shareImagesManager] listImages:self.tag_id catalog_id:self.c_id start_index:self.pn rn:self.rn];
+}
+
+
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kKeyListImagesSucc object:nil];
 }
 
 - (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
-    return _photos.count;
+    return self.photos.count;
 }
 
 - (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
-    if (index < _photos.count)
-        return [_photos objectAtIndex:index];
+    if (index < self.photos.count)
+        return [self.photos objectAtIndex:index];
     return nil;
 }
 
 - (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
-    if (index < _thumbs.count)
-        return [_thumbs objectAtIndex:index];
+    if (index < self.thumbs.count)
+        return [self.thumbs objectAtIndex:index];
     return nil;
 }
 

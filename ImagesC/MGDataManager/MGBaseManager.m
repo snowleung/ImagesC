@@ -10,7 +10,7 @@
 
 @implementation MGBaseModelObject
 
-@synthesize rn,pn,total;
+@synthesize rn,pn,total,c_id,tag_id;
 
 @end
 

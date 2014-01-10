@@ -50,7 +50,7 @@ static MGImagesManager *instance = nil;
 }
 
 -(MGImagesModel *)listImages:(NSInteger)tag_id catalog_id:(NSInteger)c_id start_index:(NSInteger)pn rn:(NSInteger) rn{
-    if (!iModel) {
+    if (1 || !iModel) { //hard to cache source
         MGImagesProtocol *p = [[MGImagesProtocol alloc] initWithTag_id:tag_id catalog_id:c_id StartIndex:pn length:rn];
         p.delegate = self;
         [p startWork];
@@ -79,7 +79,9 @@ static MGImagesManager *instance = nil;
     cm.rn = [[data objectForKey:@"rn"] integerValue];
     cm.pn = [[data objectForKey:@"pn"] integerValue];
     cm.total = [[data objectForKey:@"total"] integerValue];
-    
+    cm.c_id = [[data objectForKey:@"c_id"] integerValue];
+    cm.tag_id = [[data objectForKey:@"tag_id"] integerValue];
+
     NSArray *ar = [data objectForKey:@"images"];
     for (id c in ar) {
         MGImagesObject *o = [[MGImagesObject alloc]init];
