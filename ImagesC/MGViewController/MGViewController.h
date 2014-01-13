@@ -14,5 +14,5 @@
 }
 @property (nonatomic, strong) NSMutableArray *photos;
 @property (nonatomic, strong) NSMutableArray *thumbs;
-
+@property (nonatomic, strong) NSMutableArray *catalogs;
 @end

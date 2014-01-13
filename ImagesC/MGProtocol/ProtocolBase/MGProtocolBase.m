@@ -148,13 +148,8 @@
     if ([self parseCompressedData:recieveData]) {
         
         if (delegate && [delegate respondsToSelector:@selector(hostCallBack:withResult:)]) {
-            //返回数据有问题，虽然可以通过json解析
-            if ([[self.data objectForKey:@"ok"]integerValue] != 1) {
-                [delegate hostCallBack:self withResult:ProtocolWorkResult_Failed];
-            }
             //成功解析数据，返回
-            else
-                [delegate hostCallBack:self withResult:ProtocolWorkResult_Success];
+              [delegate hostCallBack:self withResult:ProtocolWorkResult_Success];
         }
     }
     else {

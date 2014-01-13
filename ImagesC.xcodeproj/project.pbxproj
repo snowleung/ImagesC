@@ -71,7 +71,11 @@
 		8013E17D187BDCAF00F6A178 /* MGIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8013E178187BDCAF00F6A178 /* MGIndexViewController.m */; };
 		8013E17E187BDCAF00F6A178 /* MGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8013E17A187BDCAF00F6A178 /* MGViewController.m */; };
 		8013E185187BDE3000F6A178 /* MGProtocolBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8013E184187BDE3000F6A178 /* MGProtocolBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8013E18A187BDF5B00F6A178 /* FSBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8013E188187BDF5B00F6A178 /* FSBaseManager.m */; };
+		8013E18A187BDF5B00F6A178 /* MGBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8013E188187BDF5B00F6A178 /* MGBaseManager.m */; };
+		8017BD72187FDB0700C2141E /* MGImagesProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 8017BD71187FDB0700C2141E /* MGImagesProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8017BD75187FDCE400C2141E /* MGImagesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8017BD74187FDCE400C2141E /* MGImagesManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80A71AE4187F9F1200496DFB /* MGCatalogProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A71AE3187F9F1200496DFB /* MGCatalogProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80A71AE7187FA15F00496DFB /* MGCatalogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A71AE6187FA15F00496DFB /* MGCatalogManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		80B1216A187951C5003CC817 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B12169187951C5003CC817 /* Foundation.framework */; };
 		80B1216C187951C5003CC817 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B1216B187951C5003CC817 /* CoreGraphics.framework */; };
 		80B1216E187951C5003CC817 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B1216D187951C5003CC817 /* UIKit.framework */; };
@@ -240,9 +244,17 @@
 		8013E180187BDD4D00F6A178 /* MGNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGNotification.h; sourceTree = "<group>"; };
 		8013E183187BDE3000F6A178 /* MGProtocolBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGProtocolBase.h; sourceTree = "<group>"; };
 		8013E184187BDE3000F6A178 /* MGProtocolBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGProtocolBase.m; sourceTree = "<group>"; };
-		8013E188187BDF5B00F6A178 /* FSBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaseManager.m; sourceTree = "<group>"; };
+		8013E188187BDF5B00F6A178 /* MGBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGBaseManager.m; sourceTree = "<group>"; };
 		8013E189187BDF5B00F6A178 /* MGBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGBaseManager.h; sourceTree = "<group>"; };
 		8013E18B187BDFCC00F6A178 /* MGConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGConfig.h; sourceTree = "<group>"; };
+		8017BD70187FDB0700C2141E /* MGImagesProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGImagesProtocol.h; sourceTree = "<group>"; };
+		8017BD71187FDB0700C2141E /* MGImagesProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGImagesProtocol.m; sourceTree = "<group>"; };
+		8017BD73187FDCE400C2141E /* MGImagesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGImagesManager.h; sourceTree = "<group>"; };
+		8017BD74187FDCE400C2141E /* MGImagesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGImagesManager.m; sourceTree = "<group>"; };
+		80A71AE2187F9F1200496DFB /* MGCatalogProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCatalogProtocol.h; sourceTree = "<group>"; };
+		80A71AE3187F9F1200496DFB /* MGCatalogProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCatalogProtocol.m; sourceTree = "<group>"; };
+		80A71AE5187FA15F00496DFB /* MGCatalogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCatalogManager.h; sourceTree = "<group>"; };
+		80A71AE6187FA15F00496DFB /* MGCatalogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCatalogManager.m; sourceTree = "<group>"; };
 		80B12166187951C5003CC817 /* ImagesC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagesC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B12169187951C5003CC817 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		80B1216B187951C5003CC817 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -537,6 +549,10 @@
 			isa = PBXGroup;
 			children = (
 				8013E182187BDE3000F6A178 /* ProtocolBase */,
+				80A71AE2187F9F1200496DFB /* MGCatalogProtocol.h */,
+				80A71AE3187F9F1200496DFB /* MGCatalogProtocol.m */,
+				8017BD70187FDB0700C2141E /* MGImagesProtocol.h */,
+				8017BD71187FDB0700C2141E /* MGImagesProtocol.m */,
 			);
 			path = MGProtocol;
 			sourceTree = "<group>";
@@ -553,8 +569,12 @@
 		8013E187187BDF5B00F6A178 /* MGDataManager */ = {
 			isa = PBXGroup;
 			children = (
-				8013E188187BDF5B00F6A178 /* FSBaseManager.m */,
+				8013E188187BDF5B00F6A178 /* MGBaseManager.m */,
 				8013E189187BDF5B00F6A178 /* MGBaseManager.h */,
+				80A71AE5187FA15F00496DFB /* MGCatalogManager.h */,
+				80A71AE6187FA15F00496DFB /* MGCatalogManager.m */,
+				8017BD73187FDCE400C2141E /* MGImagesManager.h */,
+				8017BD74187FDCE400C2141E /* MGImagesManager.m */,
 			);
 			path = MGDataManager;
 			sourceTree = "<group>";
@@ -882,14 +902,16 @@
 				80B12210187952DD003CC817 /* ASIDataCompressor.m in Sources */,
 				8013E0EA1879654B00F6A178 /* SDWebImagePrefetcher.m in Sources */,
 				8013E140187965D000F6A178 /* MWTapDetectingView.m in Sources */,
+				80A71AE7187FA15F00496DFB /* MGCatalogManager.m in Sources */,
 				80B1217A187951C5003CC817 /* MGAppDelegate.m in Sources */,
+				80A71AE4187F9F1200496DFB /* MGCatalogProtocol.m in Sources */,
 				80B12211187952DD003CC817 /* ASIDataDecompressor.m in Sources */,
 				8013E1101879657300F6A178 /* PSTCollectionViewController.m in Sources */,
 				8013E1221879658E00F6A178 /* MBProgressHUD.m in Sources */,
 				8013E13A187965D000F6A178 /* MWCaptionView.m in Sources */,
 				80B121E5187952CF003CC817 /* SBJsonWriter.m in Sources */,
 				8013E10D1879657300F6A178 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
-				8013E18A187BDF5B00F6A178 /* FSBaseManager.m in Sources */,
+				8013E18A187BDF5B00F6A178 /* MGBaseManager.m in Sources */,
 				80B121D9187952CF003CC817 /* FSUserHelper.m in Sources */,
 				80B12215187952DD003CC817 /* ASIInputStream.m in Sources */,
 				8013E0ED1879654B00F6A178 /* UIImage+MultiFormat.m in Sources */,
@@ -907,6 +929,7 @@
 				8013E13C187965D000F6A178 /* MWGridViewController.m in Sources */,
 				8013E1121879657300F6A178 /* PSTCollectionViewFlowLayout.m in Sources */,
 				80B121DA187952CF003CC817 /* NSObject+SBJson.m in Sources */,
+				8017BD72187FDB0700C2141E /* MGImagesProtocol.m in Sources */,
 				8013E0E71879654B00F6A178 /* SDWebImageDownloader.m in Sources */,
 				8013E0E51879654B00F6A178 /* SDWebImageCompat.m in Sources */,
 				80B121E0187952CF003CC817 /* SBJsonStreamWriter.m in Sources */,
@@ -927,6 +950,7 @@
 				8013E1191879657300F6A178 /* PSTGridLayoutSection.m in Sources */,
 				80B121DD187952CF003CC817 /* SBJsonStreamParserAccumulator.m in Sources */,
 				8013E0E81879654B00F6A178 /* SDWebImageDownloaderOperation.m in Sources */,
+				8017BD75187FDCE400C2141E /* MGImagesManager.m in Sources */,
 				80B121DF187952CF003CC817 /* SBJsonStreamParserState.m in Sources */,
 				80B121E1187952CF003CC817 /* SBJsonStreamWriterAccumulator.m in Sources */,
 				80B121EF187952CF003CC817 /* UIView+TT.m in Sources */,

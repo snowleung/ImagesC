@@ -8,6 +8,12 @@
 
 #import "MGBaseManager.h"
 
+@implementation MGBaseModelObject
+
+@synthesize rn,pn,total,c_id,tag_id;
+
+@end
+
 @implementation MGBaseManager
 
 -(void)hostCallBack:(MGProtocolBase *)protocol withResult:(ProtocolWorkResult)result
