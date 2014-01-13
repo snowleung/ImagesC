@@ -148,7 +148,7 @@
     catalogsObject *co = [self.catalogs objectAtIndex:indexPath.row];
 
     MGIndexViewController * center = [[MGIndexViewController alloc] init];
-    [center reloadSourceWithTag_id:co.tag_id catalog_id:co.c_id rn:50 pn:0];
+    [center reloadSourceWithTag_id:co.tag_id catalog_id:co.c_id rn:100 pn:0];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:center];
     MMDrawerController *d = [self mm_drawerController];
     [d setCenterViewController:nc withCloseAnimation:YES completion:nil];
