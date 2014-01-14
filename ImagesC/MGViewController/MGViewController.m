@@ -37,6 +37,7 @@
 //        
         self.view.backgroundColor = [UIColor blackColor];
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(catalogDataRecieve:) name:kKeyListCatalogsSucc object:nil];
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(imagesDataRecieve:) name:kKeyListImagesSucc object:nil];
     }
     return self;
 }
@@ -52,15 +53,18 @@
         [self.tableView reloadData];
     }
 }
-//
-//-(void)imagesDataRecieve:(NSNotification *)notification
-//{
-//    if ([[notification name] isEqualToString:kKeyListImagesSucc] == YES)
-//    {
-//        MGImagesModel * o = (MGImagesModel *)notification.object;
-//        [self generatePhotos:o];
-//    }
-//}
+-(void)imagesDataRecieve:(NSNotification *)notification
+{
+    if ([[notification name] isEqualToString:kKeyListImagesSucc] == YES)
+    {
+        MGImagesModel * o = (MGImagesModel *)notification.object;
+        MGIndexViewController * center = [[MGIndexViewController alloc] init];
+        [center generatePhotos:o];
+        UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:center];
+        MMDrawerController *d = [self mm_drawerController];
+        [d setCenterViewController:nc withCloseAnimation:YES completion:nil];
+    }
+}
 //
 //- (void)generatePhotos:(MGImagesModel *)m{
 //    
@@ -81,7 +85,9 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     [[MGCatalogManager shareCatalogManager]listCatalogs:0 rn:100];
+
 }
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -146,12 +152,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     catalogsObject *co = [self.catalogs objectAtIndex:indexPath.row];
+    [self pushBrowserWitht_id:co.tag_id Catalog_id:co.c_id rn:100 pn:0];
+}
 
-    MGIndexViewController * center = [[MGIndexViewController alloc] init];
-    [center reloadSourceWithTag_id:co.tag_id catalog_id:co.c_id rn:100 pn:0];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:center];
-    MMDrawerController *d = [self mm_drawerController];
-    [d setCenterViewController:nc withCloseAnimation:YES completion:nil];
+- (void)pushBrowserWitht_id:(NSInteger)t_id Catalog_id:(NSInteger)catalog_id rn:(NSInteger)rn pn:(NSInteger)pn{
+
+    [[MGImagesManager shareImagesManager] listImages:t_id catalog_id:catalog_id start_index:pn rn:rn];
 }
 
 //#pragma mark - MWPhotoBrowserDelegate

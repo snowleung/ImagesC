@@ -40,9 +40,9 @@
 //    MWPhoto *photo;
     BOOL displayActionButton = YES;
     BOOL displaySelectionButtons = NO;
-    BOOL displayNavArrows = NO;
+    BOOL displayNavArrows = YES;
     BOOL enableGrid = YES;
-    BOOL startOnGrid = NO;
+    BOOL startOnGrid = YES;
     
     for (MGImagesObject *iter in m.images) {
         [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:iter.origin_url]]];
@@ -80,9 +80,10 @@
 }
 
 - (void)viewDidLoad {
+
+//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(imagesDataRecieve:) name:kKeyListImagesSucc object:nil];
+//    [[MGImagesManager shareImagesManager] listImages:self.tag_id catalog_id:self.c_id start_index:self.pn rn:self.rn];
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(imagesDataRecieve:) name:kKeyListImagesSucc object:nil];
-    [[MGImagesManager shareImagesManager] listImages:self.tag_id catalog_id:self.c_id start_index:self.pn rn:self.rn];
 }
 
 

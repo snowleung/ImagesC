@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MWPhotoBrowser.h"
 
+@class MGImagesModel;
 @interface MGIndexViewController : MWPhotoBrowser <MWPhotoBrowserDelegate> {
 
 }
@@ -23,5 +24,5 @@
 
 -(void)imagesDataRecieve:(NSNotification *)notification;
 -(void)reloadSourceWithTag_id:(NSInteger)tag_id catalog_id:(NSInteger)c_id rn:(NSInteger)rn pn:(NSInteger)pn;
-
+-(void)generatePhotos:(MGImagesModel*)m;
 @end
