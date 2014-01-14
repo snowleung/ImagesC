@@ -63,9 +63,9 @@
     browser.zoomPhotosToFill = YES;
     browser.enableGrid = enableGrid;
     browser.startOnGrid = startOnGrid;
-    [browser setCurrentPhotoIndex:0];
-    
-    
+    //default zero, go to MWPhotoBrowser.m line:1369
+//    [browser setCurrentPhotoIndex:1000000];
+        
     self.photos = photos;
     self.thumbs = thumbs;
     [self reloadData];

@@ -1366,6 +1366,7 @@
     if (index >= [self numberOfPhotos])
         index = [self numberOfPhotos]-1;
     _currentPageIndex = index;
+    _currentPageIndex = 0; //i dont know why, but numberofphotos method return a large number
 	if ([self isViewLoaded]) {
         [self jumpToPageAtIndex:index animated:NO];
         if (!_viewIsActive)
