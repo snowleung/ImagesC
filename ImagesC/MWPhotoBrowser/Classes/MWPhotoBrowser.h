@@ -11,6 +11,8 @@
 #import "MWPhoto.h"
 #import "MWPhotoProtocol.h"
 #import "MWCaptionView.h"
+#import "PSTCollectionViewCommon.h"
+
 
 // Debug Logging
 #if 0 // Set to 1 to enable debug logging
@@ -40,6 +42,7 @@
 @interface MWPhotoBrowser : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet id<MWPhotoBrowserDelegate> delegate;
+@property (nonatomic) id<PSTCollectionViewDelegate> gvDelegate;
 @property (nonatomic) BOOL zoomPhotosToFill;
 @property (nonatomic) BOOL displayNavArrows;
 @property (nonatomic) BOOL displayActionButton;

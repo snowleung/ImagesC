@@ -69,5 +69,6 @@
 - (BOOL)collectionView:(PSTCollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender;
 
 - (void)collectionView:(PSTCollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender;
+-(void)mg_scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate ;
 
 @end

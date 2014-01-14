@@ -37,7 +37,7 @@
 //        
         self.view.backgroundColor = [UIColor blackColor];
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(catalogDataRecieve:) name:kKeyListCatalogsSucc object:nil];
-        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(imagesDataRecieve:) name:kKeyListImagesSucc object:nil];
+
     }
     return self;
 }
@@ -57,6 +57,7 @@
 {
     if ([[notification name] isEqualToString:kKeyListImagesSucc] == YES)
     {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:kKeyListImagesSucc object:nil];
         MGImagesModel * o = (MGImagesModel *)notification.object;
         MGIndexViewController * center = [[MGIndexViewController alloc] init];
         [center generatePhotos:o];
@@ -152,11 +153,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     catalogsObject *co = [self.catalogs objectAtIndex:indexPath.row];
-    [self pushBrowserWitht_id:co.tag_id Catalog_id:co.c_id rn:100 pn:0];
+    [self pushBrowserWitht_id:co.tag_id Catalog_id:co.c_id rn:20 pn:0];
 }
 
 - (void)pushBrowserWitht_id:(NSInteger)t_id Catalog_id:(NSInteger)catalog_id rn:(NSInteger)rn pn:(NSInteger)pn{
-
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(imagesDataRecieve:) name:kKeyListImagesSucc object:nil];
     [[MGImagesManager shareImagesManager] listImages:t_id catalog_id:catalog_id start_index:pn rn:rn];
 }
 

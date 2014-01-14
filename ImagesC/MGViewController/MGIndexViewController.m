@@ -8,6 +8,7 @@
 
 #import "MGIndexViewController.h"
 #import "MGImagesManager.h"
+#import "MJRefreshFooterView.h"
 
 @interface MGIndexViewController ()
 
@@ -22,6 +23,7 @@
     {
         MGImagesModel * o = (MGImagesModel *)notification.object;
         [self generatePhotos:o];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:kKeyListImagesSucc object:nil];
     }
 }
 
@@ -33,9 +35,11 @@
 }
 
 - (void)generatePhotos:(MGImagesModel *)m{
+    self.tag_id = m.tag_id;
+    self.c_id = m.c_id;
+    self.rn = m.rn;
+    self.pn = m.pn;
     
-    NSMutableArray *photos = [[NSMutableArray alloc] init];
-    NSMutableArray *thumbs = [[NSMutableArray alloc] init];
 
 //    MWPhoto *photo;
     BOOL displayActionButton = YES;
@@ -43,10 +47,10 @@
     BOOL displayNavArrows = YES;
     BOOL enableGrid = YES;
     BOOL startOnGrid = YES;
-    
+    NSLog(@"%d",self.thumbs.count);
     for (MGImagesObject *iter in m.images) {
-        [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:iter.origin_url]]];
-        [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:iter.origin_url]]];
+        [self.photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:iter.origin_url]]];
+        [self.thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:iter.origin_url]]];
     }
 //    // Photos
     // Options
@@ -64,10 +68,7 @@
     browser.enableGrid = enableGrid;
     browser.startOnGrid = startOnGrid;
     //default zero, go to MWPhotoBrowser.m line:1369
-//    [browser setCurrentPhotoIndex:1000000];
-        
-    self.photos = photos;
-    self.thumbs = thumbs;
+    [browser setCurrentPhotoIndex:pn];
     [self reloadData];
 }
 
@@ -75,14 +76,14 @@
 - (id)init{
     if (self = [super init]) {
         self.delegate = self;
+        self.gvDelegate = self;
+        self.photos = [[NSMutableArray alloc] init];
+        self.thumbs = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 - (void)viewDidLoad {
-
-//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(imagesDataRecieve:) name:kKeyListImagesSucc object:nil];
-//    [[MGImagesManager shareImagesManager] listImages:self.tag_id catalog_id:self.c_id start_index:self.pn rn:self.rn];
     [super viewDidLoad];
 }
 
@@ -120,6 +121,25 @@
 
 - (void)photoBrowser:(MWPhotoBrowser *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index {
     NSLog(@"Did start viewing photo at index %lu", (unsigned long)index);
+}
+
+#pragma mark - scroll
+
+//-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    [super scrollViewDidScroll:scrollView];
+//    NSLog(@"scolling");
+//}
+-(void)loadMore{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(imagesDataRecieve:) name:kKeyListImagesSucc object:nil];
+    [[MGImagesManager shareImagesManager] listImages:self.tag_id catalog_id:self.c_id start_index:101 rn:100];
+    NSLog(@"try to fetch more data");
+}
+
+-(void)mg_scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if (scrollView.contentOffset.y + 700 > scrollView.contentSize.height) {
+        //load more data;
+        [self loadMore];
+    }
 }
 
 @end

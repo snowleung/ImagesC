@@ -1111,6 +1111,7 @@
     _gridController = [[MWGridViewController alloc] init];
     _gridController.initialContentOffset = _currentGridContentOffset;
     _gridController.browser = self;
+    _gridController.gvDelegate = self.gvDelegate;
     _gridController.selectionMode = _displaySelectionButtons;
     _gridController.view.frame = self.view.bounds;
     _gridController.view.frame = CGRectOffset(_gridController.view.frame, 0, self.view.bounds.size.height);
@@ -1366,7 +1367,7 @@
     if (index >= [self numberOfPhotos])
         index = [self numberOfPhotos]-1;
     _currentPageIndex = index;
-    _currentPageIndex = 0; //i dont know why, but numberofphotos method return a large number
+//    _currentPageIndex = 0; //i dont know why, but numberofphotos method return a large number
 	if ([self isViewLoaded]) {
         [self jumpToPageAtIndex:index animated:NO];
         if (!_viewIsActive)

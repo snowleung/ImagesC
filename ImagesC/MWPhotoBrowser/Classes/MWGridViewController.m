@@ -195,4 +195,11 @@
     return UIEdgeInsetsMake(margin, margin, margin, margin);
 }
 
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//    [super scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
+    if (self.gvDelegate) {
+        [self.gvDelegate mg_scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
+    }
+    NSLog(@"end dragging");
+}
 @end

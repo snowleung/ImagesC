@@ -10,7 +10,10 @@
 #import "MWPhotoBrowser.h"
 
 @class MGImagesModel;
-@interface MGIndexViewController : MWPhotoBrowser <MWPhotoBrowserDelegate> {
+
+
+
+@interface MGIndexViewController : MWPhotoBrowser <MWPhotoBrowserDelegate,PSTCollectionViewDelegate> {
 
 }
 @property (nonatomic, strong) NSMutableArray *photos;
