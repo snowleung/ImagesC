@@ -8,7 +8,6 @@
 
 #import "MGIndexViewController.h"
 #import "MGImagesManager.h"
-#import "MJRefreshFooterView.h"
 
 @interface MGIndexViewController ()
 
