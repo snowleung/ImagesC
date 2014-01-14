@@ -47,7 +47,6 @@
     BOOL displayNavArrows = YES;
     BOOL enableGrid = YES;
     BOOL startOnGrid = YES;
-    NSLog(@"%d",self.thumbs.count);
     for (MGImagesObject *iter in m.images) {
         [self.photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:iter.origin_url]]];
         [self.thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:iter.origin_url]]];
