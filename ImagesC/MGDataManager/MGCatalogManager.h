@@ -37,4 +37,5 @@
 @property (nonatomic, retain) catalogsModel *cModel;
 +(MGCatalogManager *)shareCatalogManager;
 -(catalogsModel *)listCatalogs:(NSInteger)pn rn:(NSInteger) rn;
+-(catalogsModel *)listCatalogsWithTag:(NSInteger)t pn:(NSInteger)pn rn:(NSInteger)rn;
 @end

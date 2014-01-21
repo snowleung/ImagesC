@@ -24,7 +24,10 @@
     }
     return self;
 }
-
+-(void)dealloc{
+    [self.catalogs release];
+    [super dealloc];
+}
 @end
 
 @implementation MGCatalogManager
@@ -51,6 +54,10 @@ static MGCatalogManager *instance = nil;
     return self;
 }
 
+-(void)cleanCache{
+    [self.cModel release];
+}
+
 -(catalogsModel *)listCatalogs:(NSInteger)pn rn:(NSInteger)rn{
     if (!cModel) {
         MGCatalogProtocol *p = [[MGCatalogProtocol alloc]initWithStartIndexAndLength:pn length:rn];
@@ -59,6 +66,14 @@ static MGCatalogManager *instance = nil;
     }
     return cModel;
 }
+
+-(catalogsModel *)listCatalogsWithTag:(NSInteger)t pn:(NSInteger)pn rn:(NSInteger)rn{
+    MGCatalogProtocol *p = [[MGCatalogProtocol alloc]initWithTag:t StartIndex:pn length:rn];
+    p.delegate = self;
+    [p startWork];
+    return cModel;
+}
+
 
 -(void)hostCallBack:(MGProtocolBase *)protocol withResult:(ProtocolWorkResult)result{
     if (result == ProtocolWorkResult_Success) {

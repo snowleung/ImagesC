@@ -12,6 +12,7 @@
 #import "MGCatalogManager.h"
 #import "MGImagesManager.h"
 #import "MGIndexViewController.h"
+#import "MGTagViewController.h"
 
 @interface MGViewController ()
 
@@ -36,7 +37,6 @@
 //        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
 //        
         self.view.backgroundColor = [UIColor blackColor];
-        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(catalogDataRecieve:) name:kKeyListCatalogsSucc object:nil];
 
     }
     return self;
@@ -85,6 +85,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(catalogDataRecieve:) name:kKeyListCatalogsSucc object:nil];
     [[MGCatalogManager shareCatalogManager]listCatalogs:0 rn:100];
 
 }
@@ -148,8 +149,32 @@
 	
 }
 
+
+#pragma mark - btn touch event
+-(void)btnTouch:(id)e{
+    MGTagViewController *center = [[MGTagViewController alloc]initWithStyle:UITableViewStylePlain];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:center];
+    MMDrawerController *d = [self mm_drawerController];
+    [d setCenterViewController:nc withCloseAnimation:YES completion:nil];
+}
+
 #pragma mark -
 #pragma mark Table view delegate
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 32.0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *v = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 32)];
+    v.backgroundColor = [UIColor whiteColor];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
+    [btn addTarget:self action:@selector(btnTouch:) forControlEvents:UIControlEventTouchUpInside];
+    btn.titleLabel.text = @"current is xxx, changed?";
+    btn.titleLabel.textColor = [UIColor whiteColor];
+    btn.backgroundColor = [UIColor blueColor];
+    [v addSubview:btn];
+    return v;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     catalogsObject *co = [self.catalogs objectAtIndex:indexPath.row];

@@ -1,21 +1,20 @@
 //
-//  MGCatalogProtocol.m
+//  MGTagsProtocol.m
 //  ImagesC
 //
-//  Created by snow on 10/1/14.
+//  Created by snow on 21/1/14.
 //  Copyright (c) 2014 snow. All rights reserved.
 //
 
-#import "MGCatalogProtocol.h"
+#import "MGTagsProtocol.h"
 
-@implementation MGCatalogProtocol
-@synthesize current_tag, startIndex, length;
+@implementation MGTagsProtocol
+@synthesize startIndex, length;
 -(id)init
 {
     self = [super init];
     if (self) {
         self.method = GET;
-        current_tag = 1;
     }
     return self;
 }
@@ -29,19 +28,10 @@
     }
     return self;
 }
--(id)initWithTag:(NSInteger)t StartIndex:(NSInteger)start length:(NSInteger)len{
-    self = [self init];
-    if (self) {
-        self.current_tag = t;
-        self.startIndex = start;
-        self.length = len;
-    }
-    return self;
 
-}
 -(NSString*)getUrl
 {
-    return [NSString stringWithFormat:@"http://catworld.sinaapp.com/list_catalogs?tag_id=%d&pn=%d&rn=%d",current_tag,startIndex,length];
+    return [NSString stringWithFormat:@"http://catworld.sinaapp.com/list_tags?pn=%d&rn=%d",startIndex,length];
 }
 
 -(void)onAddDataInRoot:(NSMutableString *)rootnode
@@ -59,5 +49,4 @@
     NSLog(@"%@",aData);
     self.data = aData;
 }
-
 @end
