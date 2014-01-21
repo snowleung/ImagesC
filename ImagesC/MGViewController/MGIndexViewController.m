@@ -129,7 +129,7 @@
 //}
 -(void)loadMore{
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(imagesDataRecieve:) name:kKeyListImagesSucc object:nil];
-    [[MGImagesManager shareImagesManager] listImages:self.tag_id catalog_id:self.c_id start_index:101 rn:100];
+    [[MGImagesManager shareImagesManager] listImages:self.tag_id catalog_id:self.c_id start_index:self.pn + 100 rn:100];
     NSLog(@"try to fetch more data");
 }
 
