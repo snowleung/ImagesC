@@ -47,7 +47,9 @@
     BOOL enableGrid = YES;
     BOOL startOnGrid = YES;
     for (MGImagesObject *iter in m.images) {
-        [self.photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:iter.origin_url]]];
+        MWPhoto *m = [MWPhoto photoWithURL:[NSURL URLWithString:iter.origin_url]];
+        m.caption = [iter.description  stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        [self.photos addObject:m];
         [self.thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:iter.origin_url]]];
     }
 //    // Photos
