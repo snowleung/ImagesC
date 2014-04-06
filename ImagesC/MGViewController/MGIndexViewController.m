@@ -15,13 +15,14 @@
 
 @implementation MGIndexViewController
 @synthesize tag_id,c_id,rn,pn,photos,thumbs;
-
+static bool isLoading = false;
 -(void)imagesDataRecieve:(NSNotification *)notification
 {
     if ([[notification name] isEqualToString:kKeyListImagesSucc] == YES)
     {
         MGImagesModel * o = (MGImagesModel *)notification.object;
         [self generatePhotos:o];
+        isLoading = false;
         [[NSNotificationCenter defaultCenter] removeObserver:self name:kKeyListImagesSucc object:nil];
     }
 }
@@ -136,9 +137,12 @@
 }
 
 -(void)mg_scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if (scrollView.contentOffset.y + 700 > scrollView.contentSize.height) {
-        //load more data;
-        [self loadMore];
+    if (!isLoading) {
+        if (scrollView.contentOffset.y + 700 > scrollView.contentSize.height) {
+            //load more data;
+            isLoading = true;
+            [self loadMore];
+        }
     }
 }
 
